@@ -1,0 +1,6 @@
+{
+  "name": "Urban Lease",
+  "description": "Premium land banking and high-end residential leasing partner portal featuring interactive portfolio showcases, yield calculators, auto-scrolling architectural galleries, and dynamic investment trackers.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

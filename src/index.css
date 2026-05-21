@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+  
+  .animate-pan-bg {
+    animation: panBackground 30s ease-in-out infinite;
+  }
+  
+  .animate-card-slide-up {
+    animation: cardSlideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  .slide-bottom-up {
+    animation: slideBottomUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  .slide-up-bottom {
+    animation: slideUpBottom 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  .slide-left-right {
+    animation: slideLeftRight 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  .slide-right-left {
+    animation: slideRightLeft 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes cardSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes slideBottomUp {
+  0% {
+    transform: translateY(105%) scale(1.1);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 0.35;
+  }
+}
+
+@keyframes slideUpBottom {
+  0% {
+    transform: translateY(-105%) scale(1.1);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 0.35;
+  }
+}
+
+@keyframes slideLeftRight {
+  0% {
+    transform: translateX(-105%) scale(1.1);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0) scale(1);
+    opacity: 0.35;
+  }
+}
+
+@keyframes slideRightLeft {
+  0% {
+    transform: translateX(105%) scale(1.1);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0) scale(1);
+    opacity: 0.35;
+  }
+}
+
+/* Beautiful slow-panning cinematic animation simulating a luxury drone pass */
+@keyframes panBackground {
+  0% {
+    transform: scale(1.18) translate(0%, 0%) rotate(0deg);
+  }
+  25% {
+    transform: scale(1.22) translate(-2.5%, 1.5%) rotate(0.1deg);
+  }
+  50% {
+    transform: scale(1.18) translate(-4%, -2%) rotate(-0.1deg);
+  }
+  75% {
+    transform: scale(1.22) translate(1.5%, -3%) rotate(0.1deg);
+  }
+  100% {
+    transform: scale(1.18) translate(0%, 0%) rotate(0deg);
+  }
+}
+
+/* Custom gorgeous scrollbar design fit for a high-end property portal */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #08090C;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #111827;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #10B981;
+}
+
+/* Custom 3D & Glow Interactive Utilities */
+.perspective-1000 {
+  perspective: 1000px;
+}
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+.backface-hidden {
+  backface-visibility: hidden;
+}
+.card-3d {
+  transform-style: preserve-3d;
+  transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.6s cubic-bezier(0.2, 0.8, 0.2, 1), border-color 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.card-3d:hover {
+  transform: translateY(-8px) rotateX(5deg) rotateY(-5deg);
+  box-shadow: 0 25px 50px -12px rgba(16, 185, 129, 0.3), 0 0 15px -1px rgba(16, 185, 129, 0.15);
+  border-color: rgba(16, 185, 129, 0.5) !important;
+}
+.translate-z-10 {
+  transform: translateZ(10px);
+}
+.translate-z-15 {
+  transform: translateZ(15px);
+}
+.translate-z-20 {
+  transform: translateZ(20px);
+}
+.translate-z-30 {
+  transform: translateZ(30px);
+}
+
