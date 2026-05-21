@@ -1,11 +1,13 @@
 import { PropertyPlot, ProgressMilestone } from '../types';
+import heroVillaImg from '../assets/images/hero_luxury_villa_1779386123553.png';
+import premiumLoungeImg from '../assets/images/premium_lounge_1779386142703.png';
 
 export const HERO_VIDEO_MOCK = "https://assets.mixkit.co/videos/preview/mixkit-modern-architectural-home-with-pool-at-sunset-41618-large.mp4";
 
-// High-end image sources
+// High-end image sources compiled by Vite
 export const GENERATED_IMAGES = {
-  heroVilla: "/src/assets/images/hero_luxury_villa_1779386123553.png",
-  premiumLounge: "/src/assets/images/premium_lounge_1779386142703.png",
+  heroVilla: heroVillaImg,
+  premiumLounge: premiumLoungeImg,
 };
 
 export const PORTFOLIO_PLOTS: PropertyPlot[] = [
